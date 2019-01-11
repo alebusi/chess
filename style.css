@@ -12,6 +12,7 @@
   height: 10vw;
   font-family: myFont;
   font-size: 10vw;
+  align: center;
 }
 .colore1 {
   background-color: white;
@@ -44,10 +45,12 @@
  }
 
 .partenza {
+   width: 100%;
    background-color: #F88017;
 }
 
 .arrivo {
+   width: 100%;
    background-color: #F88017;
 }
 
