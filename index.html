@@ -1,152 +1,169 @@
 <!DOCTYPE html>
-<html lang="it" >
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Chess</title>
-  
- 
-  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
-  
+    <meta charset="utf-8" />
+    <!--<meta name="viewport" content="width=800px, user-scalable=no">-->
+    <title>Chess</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<style type="text/css">
-	@font-face {
-	font-family: 'myFont';
-	src: url('CHEQ_TT.ttf');
-}
 	
-	div {
-  font-family: myFont;
-	font-size: 4em;
-}
-	
-	<div class="tabellone">
- <table id="t01" style="margin-left:auto; margin-right:auto;">
-    <tr><td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td> 
+<body>
+  <div class="conferma" onclick="mySel()"></div>
+  <table class="chess">
+    <tr>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">t</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">j</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">n</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">w</span></div></td>
+      <td class="bordo"></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">l</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">n</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">j</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">t</span></div></td>
     </tr>
     <tr>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-    </tr>
-    <tr><td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td> 
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
+      <td class="bordo"></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo1">o</span></div></td>
     </tr>
     <tr>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-    </tr>    
-        <tr><td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td> 
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="bordo"></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
     </tr>
     <tr>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="spazio" onclick="myfunc2(this)"></td>
-        <td class="largo" onclick="mysel(this)"></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="bordo"></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
     </tr>
-    <tr><td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td>
-        <td class="largo" onclick="mysel(this)"></td>
-        <td class="stretto"></td> 
+    <tr><td colspan="9" class="bordo_orizz"></td></tr>
+    <tr>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="bordo"></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+    </tr>
+    <tr>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="bordo"></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"></div></td>
+    </tr>
+    <tr>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+      <td class="bordo"></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">o</span></div></td>
+    </tr>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">t</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">j</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">n</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">w</span></div></td>
+      <td class="bordo"></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">l</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">n</span></div></td>
+      <td class="colore2">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">j</span></div></td>
+      <td class="colore1">
+        <div class="standard" onclick="mySwitch(this)"><span class="pezzo2">t</span></div></td>
     </tr>
   </table>
- </div>
-	p#reading_area{
-		width: 100vw;
-		text-align: left;
-		font-family: 'Arial', serif;
-		font-size: 60px;
-		font-weight: bold;
-		position: fixed;
-		bottom: 40vh;
-		left: 30vw;
-		text-transform: normal;
-		letter-spacing: 0px;
-		}
-	
-	
-	div.circle{
-		width: 30px;
-		height:30px;
-		border-radius:15px;
-		margin-bottom: 30px;
-	}
-	div.circle.red{
-		background-color: red;
-	}
-	div.circle.black{
-		background-color: black;
-	}
-		
-</style>
-
-<body>
-
-  <div>Jkn</div>
-
-  <!--  <script  src="js/index.js"></script> -->
-
+  <div class="conferma" onclick="mySel()"></div>
+  <script src="index.js"></script>
 </body>
-
 </html>
