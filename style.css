@@ -1,39 +1,44 @@
+body {
+  background-color: black;
+}
+
 @font-face {
   font-family: 'myFont';
   src: url('CHEQ_TT.ttf');
 }
 	
 .chess {
+  table-layout: fixed;
   width: 100%;
 }
 
 .chess div {
-  width: 12vw;
   height: 12vw;
   font-family: myFont;
   font-size: 12vw;
-  align: center;
+  text-align: center;
 }
+
 .colore1 {
   background-color: white;
 }
 
 .colore2 {
-  background-color: #ffbf18;
+  background-color: #8F8F8F;
 }
 
 .bordo {
-  background-color: red;
+  background-color: black;
   width: 1vw;
 }
 
 .bordo_orizz {
-  background-color: red;
+  background-color: black;
   height: 1vw;
 }
 
 .pezzo1 {
-  color: black;
+  color: red;
 }
 
 .pezzo2 {
@@ -45,21 +50,23 @@
  }
 
 .partenza {
-   width: 100%;
-   background-color: #F88017;
+    width: 100%;
+    background-image: radial-gradient(transparent, transparent, transparent, transparent, transparent, transparent, black, black, black, black);
 }
 
 .arrivo {
    width: 100%;
-   background-color: #F88017;
+   background-image: radial-gradient(black, black, black, black, black, transparent, transparent, transparent, transparent, transparent);
 }
 
 .conferma {
-    width: 20%;
-    height: 8vh;
-    margin: 2vh auto;
-    background-color: black;
+    width: 10%;
+    height: 6vh;
+    margin: 3vh auto;
+    background-color: white;
 }
+
+.conferma:hover {background-color: yellow;}
 
 table {
    border-collapse: collapse;
