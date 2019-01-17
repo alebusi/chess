@@ -16,11 +16,19 @@ function mySel() {
 function mySwitch(div) {
   suona.src = 'campo.mp3';
   var className = div.getAttribute("class");
+  var par = document.getElementsByClassName("partenza");
+  var arr = document.getElementsByClassName("arrivo");
   if (className=="standard") {
-    div.className = "partenza";
+    if (par.length == 0) {
+       div.className = "partenza";
     }
+    else if (par.length == 1 && arr.length == 0)
+       {
+       div.className = "arrivo";
+       }
+  }
   else if (className=="partenza") {
-    div.className = "arrivo";
+    div.className = "standard";
     }
   else if (className=="arrivo") {
     div.className = "standard";
