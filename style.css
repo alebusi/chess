@@ -9,8 +9,8 @@ body {
 }
 	
 .chess {
-  width: 840px;
-  height: 840px;
+  width: 810px;
+  height: 810px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -19,11 +19,11 @@ body {
 }
 
 .chess div {
-  height: 12vw;
+  height: 100px;
   font-family: myFont;
-  font-size: 12vw;
+  font-size: 100px;
   text-align: center;
-  line-height: 12vw;
+  line-height: 100px;
 }
 
 .colore1 {
@@ -36,12 +36,12 @@ body {
 
 .bordo {
   background-color: #808080;
-  width: 1vw;
+  width: 10px;
 }
 
 .bordo_orizz {
   background-color: #808080;
-  height: 1vw;
+  height: 10px;
 }
 
 .pezzo1 {
