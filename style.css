@@ -44,6 +44,11 @@ body {
   height: 10px;
 }
 
+.pezzo1, .pezzo2 {
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white;
+}
+
 .pezzo1 {
   color: red;
 }
@@ -67,10 +72,14 @@ body {
 }
 
 .conferma {
-    width: 10%;
-    height: 6vh;
-    margin: 3vh auto;
+    width: 50px;
+    height: 50px;
     background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .conferma:hover {background-color: yellow;}
